@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discord QR Generator</title>
+   <link rel="icon" href="logo.png">
   <link rel="stylesheet" href="styles.css">
   <meta name="google-site-verification" content="6uIdS3khAvSls8TlaGkgvSFr67kWFgdL6X5BfFvtvGs" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -186,11 +187,40 @@ h2 {
   transform: translateY(200px);
   
 }
+/* Styling for the main content */
+.content {
+  padding: 20px;
+  background-color: #f4f4f4;
+  height: 2000px; /* To simulate scrolling content */
+ 
+}
+.logo {
+  border-radius:50px;
+  height:60px;
+  width:60px;
+}
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .logo {
+    width: 80px; /* Adjust logo size for small screens */
+    top: 10px; /* Reduce the distance from the top */
+    left: 10px; /* Reduce the distance from the left */
+  }
+}
+
+/* Media query for tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .logo {
+    width: 90px; /* Adjust logo size for tablets */
+    top: 15px;
+    left: 15px;
+  }
+}
 
   </style>
 </head>
 <body>
-
+ <img src="logo.png"class="logo" alt="">
   <div class="container">
     <h2>Create Discord Server QR Link <i class="fa-brands fa-discord"></i></h2>
     <button id="openPopupBtn">Create QR Code</button>
